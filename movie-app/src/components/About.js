@@ -1,22 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Footer from './Footer';
-import Header from './Header';
-import Nav from './Nav';
-
 
 class About extends React.Component {
-    render () {
-        const title = 'About This Site';
-        const content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.';
+    render() {
         return (
-            <div>
-                <Header />
-                <h1>{title}</h1>
-                <p>{content}</p>
-                <Footer />
-            </div>
-        )
+        <main>
+            <section>
+                <h2>About Page</h2>
+                <p>Saepe vitae deserunt cupiditate vel reiciendis adipisci quasi. At, dolore qui, saepe similique id repellat ipsam sapiente repellendus commodi deleniti natus itaque hic temporibus nam nobis tempora enim suscipit quas!</p>
+            </section>
+        </main>
+        );
     }
 }
 

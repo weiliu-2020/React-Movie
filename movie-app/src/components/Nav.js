@@ -1,15 +1,14 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 class Nav extends React.Component {
     render() {
         return (
         <nav>
             <ul>
-                {/* Insert the <NavLink to=""></NavLink> later */}
-                <li>Home</li>
-                <li>About</li>
-                <li>Favourites</li>
-                <li>Watchlist</li>
+                <li><NavLink to="/">Home</NavLink></li>
+                <li><NavLink to="/about">About</NavLink></li>
+                <li><NavLink to="/favourites">Favourites</NavLink></li>
             </ul>
         </nav>
         );
