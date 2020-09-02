@@ -1,7 +1,19 @@
 import React from 'react';
+import Header from './components/Header';
+import Nav from './components/Nav';
+import Footer from './components/Footer';
 
-const AppRouter = () => (
-	<p>Testing the React. Delete later</p>
-);
+class AppRouter extends React.Component {
+
+	render() {
+		return (
+			<div>
+				<Header />
+				<Nav />
+				<Footer />
+			</div>
+		)
+	}
+}
 
 export default AppRouter;
