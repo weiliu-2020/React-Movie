@@ -1,0 +1,40 @@
+@use './base/variables' as *;
+
+.container { 
+    border: 1px solid red;
+    .movie {
+        padding: 30px 50px;
+        img {
+            display: block;
+            margin: 0 auto;
+            filter: drop-shadow(0 0 0.75rem #cccccc);
+        }
+        h2, h3 {
+            text-align: center;
+        }
+        h3 { 
+            font-style: italic;
+        }
+    }
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+    }
+    .button {
+        background-color: black;
+        border: 1px dotted white;
+        color: white;
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    .button:hover {
+        background-color: white;
+        color: black;
+    }
+}
