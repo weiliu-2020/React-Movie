@@ -1,5 +1,13 @@
 @use 'variables' as *;
 
+body {
+    font-family: $bodyText;
+}
+
 h1 {
     font-family: $logoText;
+}
+
+p {
+    line-height: 2em;
 }

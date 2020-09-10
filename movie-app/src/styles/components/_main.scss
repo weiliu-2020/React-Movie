@@ -1,6 +1,6 @@
 @use './base/variables' as *;
 
 body {
-    color: $bodyText;
-    background-color: $bodyBackground;
+    color: $bodyTextColor;
+    background-color: $bodyBgColor;
 }
