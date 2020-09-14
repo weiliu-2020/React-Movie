@@ -1,0 +1,23 @@
+nav {
+    position: absolute;
+    top:25px;
+    right: 1px;
+    width: 60%;
+    
+    ul{
+    display: flex;
+    flex-wrap: none;
+    list-style: none;
+    margin: 0;
+    
+    justify-content: space-evenly;
+    }   
+    a{
+        display: block;
+        
+        line-height: 10px;
+        font-size: 1.5em;
+        text-decoration: none;
+        color: white;       
+}
+}
