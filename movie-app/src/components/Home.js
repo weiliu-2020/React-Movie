@@ -8,7 +8,6 @@ class Home extends React.Component {
         return (
         <main>
             <section>
-                <h2>Home Page</h2>
                 <SearchBar />
                 <TitleFilter />
                 <MovieGrid />
