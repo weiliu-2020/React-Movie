@@ -12,6 +12,10 @@
 .filter {
     text-decoration: none;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .filter:hover,
 .filter:active,
@@ -22,12 +26,10 @@
     color: #56C7F5;
 }
 .filter:after {
-    position: absolute;
     content: '';
     height: 3px;
     bottom: -10px;
-    margin: 0 auto;
-    left: 0;
+    left: 0%;
     width: 0%;
     background: #76F9FB;
     -o-transition:.5s;
@@ -43,8 +45,11 @@
 }
 
 /*a simpler underline with less effect
-.active-filter {
-    text-decoration: underline blue solid;
+.filter:hover
+.filter:active
+.filter:focus {
+    color: #56C7F5;
+    text-decoration: underline #76F9FB solid;
     text-underline-position: under;
 }
 */
