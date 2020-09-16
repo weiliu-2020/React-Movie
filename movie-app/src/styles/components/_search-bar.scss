@@ -7,6 +7,9 @@
 }
 .search-bar>input {
     display: none;
+    border-radius: 10px;
+    border: 0;
+    min-width: 300px;
 }
 .search-icon>button:hover,
 .search-icon>button:active,

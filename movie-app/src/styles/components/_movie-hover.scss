@@ -1,0 +1,7 @@
+@use './base/variables' as *;
+
+
+.container .movie img:hover {
+    transition: all .5s;
+    transform: scale(1.3);
+}
