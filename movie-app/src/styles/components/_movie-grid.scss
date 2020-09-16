@@ -58,17 +58,36 @@
 @media (min-width: 1024px) {
     .container {
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px 30px;
+        grid-gap: 10px 10px;
+        margin: 0px 30px;
         .movie {
             margin-bottom: 25px;
             padding: 0px;
             display: flex;
-            justify-content: center;
-            border: 1px solid red;
+            align-items: center;
+            p {
+                font-size: 12px;
+            }
         }
         .movie-info {
-            margin-left: 30px;
-            border: 1px solid blue;
+            padding: 10px;
+            margin: 0px 15px;
+        }
+        .button {
+            font-size: 12px;
+            padding: 5px 10px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        h2 {
+            font-size: 18px;
+            margin-top: 0;
+        }
+        h3 {
+            font-size: 14px;
         }
     }
 }
