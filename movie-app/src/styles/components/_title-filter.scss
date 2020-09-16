@@ -27,11 +27,13 @@
 }
 .filter:after {
     content: '';
-    height: 3px;
+    height: 4px;
     bottom: -10px;
     left: 0%;
     width: 0%;
     background: #76F9FB;
+    box-shadow: 0 1px 1px;
+    border-radius: 3px;
     -o-transition:.5s;
   	-ms-transition:.5s;
     -moz-transition:.5s;
