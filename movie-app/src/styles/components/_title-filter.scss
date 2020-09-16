@@ -1,0 +1,50 @@
+@use './base/variables' as *;
+
+.filters {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 1.3em;
+    padding: 0;
+}
+
+.filter {
+    text-decoration: none;
+    position: relative;
+}
+.filter:hover,
+.filter:active,
+.filter:focus {
+    color: #56C7F5;
+}
+.active-filter {
+    color: #56C7F5;
+}
+.filter:after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    bottom: -10px;
+    margin: 0 auto;
+    left: 0;
+    width: 0%;
+    background: #76F9FB;
+    -o-transition:.5s;
+  	-ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    
+    
+}
+.filter:hover:after {
+    width: 100%;
+}
+
+/*a simpler underline with less effect
+.active-filter {
+    text-decoration: underline blue solid;
+    text-underline-position: under;
+}
+*/
