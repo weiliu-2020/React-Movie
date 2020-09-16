@@ -17,14 +17,21 @@
     align-items: center;
     justify-content: center;
 }
+.filter>a {
+    text-decoration: none;
+    color: white;
+}
 .filter:hover,
 .filter:active,
 .filter:focus {
     color: #56C7F5;
 }
-.active-filter {
+.filter>a:hover,
+.filter>a:active,
+.filter>a:focus {
     color: #56C7F5;
 }
+
 .filter:after {
     content: '';
     height: 4px;

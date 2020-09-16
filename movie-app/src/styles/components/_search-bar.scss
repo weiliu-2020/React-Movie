@@ -1,0 +1,22 @@
+@use './base/variables' as *;
+
+.search-bar {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.search-bar>input {
+    display: none;
+}
+.search-icon>button:hover,
+.search-icon>button:active,
+.search-icon>button:focus {
+    background-color: orange;
+    box-shadow: 1px 1px 1px white;
+}
+
+@media (min-width: 600px) {
+    .search-bar>input {
+        display: block;
+    }
+}

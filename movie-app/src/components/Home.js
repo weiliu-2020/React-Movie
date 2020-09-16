@@ -1,5 +1,6 @@
 import React from 'react';
 import MovieGrid from './MovieGrid';
+import SearchBar from './SearchBar';
 import TitleFilter from './TitleFilter';
 
 class Home extends React.Component {
@@ -8,6 +9,7 @@ class Home extends React.Component {
         <main>
             <section>
                 <h2>Home Page</h2>
+                <SearchBar />
                 <TitleFilter />
                 <MovieGrid />
             </section>
