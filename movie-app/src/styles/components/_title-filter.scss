@@ -31,6 +31,9 @@
 .filter>a:focus {
     color: #56C7F5;
 }
+.filter>a {
+    margin-bottom: 5px;
+}
 
 .filter:after {
     content: '';
