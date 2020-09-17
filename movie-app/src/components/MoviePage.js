@@ -8,7 +8,9 @@ class MoviePage extends React.Component {
         <main>
             <section>
                 <div class="movie-page-container">
-                    <Link to="/moviepage"><img src= {tempImg} alt="Avengers Endgame Poster" /></Link>
+                    <div class="movie-page-poster">
+                        <img src= {tempImg} alt="Avengers Endgame Poster" />
+                    </div>
                     <div class="movie-page-info">
                         <h1>Avengers: Endgame</h1>
                         <div class="date-rating">
