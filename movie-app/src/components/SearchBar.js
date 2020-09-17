@@ -5,9 +5,7 @@ class SearchBar extends React.Component {
         return (
             <div class="search-bar">
                 <input type="text"placeholder="Type your search here..." />
-                <div class="search-icon">
-                    <button>Search</button>
-                </div>
+
             </div>
         )
     }
