@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 // Components
 import Header from './components/Header';
-import Nav from './components/Nav';
+
 import Footer from './components/Footer';
 // Pages
 import Home from './components/Home';
@@ -17,7 +17,7 @@ class AppRouter extends React.Component {
 			<Router>
 				<div>
 					<Header />
-					<Nav />
+					
 					<Switch>
 						<Route path="/" exact><Home /></Route>
 						<Route path="/about"><About /></Route>

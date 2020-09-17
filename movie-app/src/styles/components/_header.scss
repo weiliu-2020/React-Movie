@@ -3,11 +3,19 @@
 header {
     width:100%;
     background-color: rgb(53, 54, 58, 0.664);
-    line-height: 60px;
+    
     margin-top: 0px;
+    margin-bottom: 30px;
     box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+    display: flex;
+    flex-wrap: none;
+    justify-content: flex-end;
+    align-items: center;
+    
     h1{
-        margin-top: 0px;
+        width: 30%;
+        margin: 0 auto;
+       
     }
     h1 a.active{
         margin-top: 0px;
@@ -15,9 +23,28 @@ header {
         font-family: $logoText;
         text-shadow: 2px 4px #757575;
         text-transform: uppercase;
-        margin-left: 55px;
+        
         color: white;
         text-decoration: none;
         
     }
+}
+
+header nav {
+    width: 65%;
+     ul{
+         display:flex;
+         flex-wrap: nowrap;
+         justify-content: space-around;
+         list-style: none;
+         margin-left: 45px;
+     }
+    a{
+        display: block;
+        
+        line-height: 10px;
+        font-size: 1.5em;
+        text-decoration: none;
+        color: white;       
+}
 }
