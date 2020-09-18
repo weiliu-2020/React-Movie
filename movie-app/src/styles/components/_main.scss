@@ -5,3 +5,12 @@ body {
     background: $bodyBgGradient;
     background-color: $bodyBgColor;
 }
+
+article {
+    text-align: center;
+    margin: 35px;
+}
+
+p {
+    text-align: left;
+}
