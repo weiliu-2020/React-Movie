@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {APP_FOLDER_NAME} from './globals/variables';
 // Components
 import Header from './components/Header';
 import Navbar from './components/Navbar/Navbar';
@@ -15,7 +16,7 @@ import PageNotFound from './components/PageNotFound';
 class AppRouter extends React.Component {
 	render() {
 		return (
-			<Router>
+			<Router basename = {APP_FOLDER_NAME}>
 				<div>
 				<Navbar />
 					
@@ -30,7 +31,6 @@ class AppRouter extends React.Component {
 					<Footer />
 				</div>
 			</Router>
-			
 		)
 	}
 }
