@@ -3,11 +3,12 @@
 .container { 
     display: grid;
     grid-template-columns: 1fr;
+    margin: 0 30px 0 30px;
+    grid-gap: 10px 20px;
+    text-align: center;
     .movie {
-        padding: 30px 50px;
         img {
-            display: block;
-            margin: 0 auto;
+    
             box-shadow: 0 0 0.05rem rgba(204,204,204,.15), 
             0 0 0.15rem rgba(204,204,204,.15), 
             0 0 0.25rem rgba(204,204,204,.15), 
@@ -17,92 +18,21 @@
             0 0 0.65rem rgba(204,204,204,.15);
             
         }
-        h2, h3 {
-            text-align: center;
-        }
-        h3 { 
-            font-style: italic;
-            margin-top: -10px;
-        }
-    }
-    .button-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 25px;
-    }
-    .button {
-        background-color: black;
-        border: 1px solid white;
-        color: white;
-        padding: 10px 25px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 14px;
-        margin: 4px 2px;
-        cursor: pointer;
-    }
-    .button:hover {
-        background-color: white;
-        color: black;
     }
 }
 
 @media (min-width: 600px) {
     .container {
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 15px 10px;
-        padding: 0px 20px;
-        .movie {
-            padding: 15px 25px;
-            p {
-                font-size: 15px;
-            }
-        }
+        grid-gap: 15px 30px;
+ 
     }
 }
 
 @media (min-width: 1024px) {
     .container {
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px 10px;
-        margin: 0px 30px;
-        .movie {
-            margin-bottom: 25px;
-            padding: 0px;
-            display: flex;
-            align-items: center;
-            
-        }
-        .movie-info {
-            padding: 10px;
-            margin: 0px 15px;
-         p {
-            font-size: 14px;
-        }}
-        .button {
-            font-size: 12px;
-            padding: 5px 10px;
-        }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 15px;
-        }
-        h2 {
-            font-size: 25px;
-            margin-top: 0;
-            font-family: $logoText ;
-        }
-        h3 {
-            font-size: 16px;
-            margin-bottom: 0%;
-
-        }.ratings{
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: space-evenly;
-        }
+        grid-template-columns: repeat(4, 1fr);
+  
         
     }
 }

@@ -17,7 +17,8 @@
     transition: ease-in-out, width .35s ease-in-out;
 }
 input[type="text"]:focus {
-    outline: none
+    outline: none;
+    text-align: center;
   }
 .search-icon>button:hover,
 .search-icon>button:active,
