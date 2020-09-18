@@ -10,11 +10,13 @@ class MovieGrid extends React.Component {
                 <div className="poster-container">
                     <Link className="poster-img" to="/moviepage"><img src= {tempImg} alt="Avengers Endgame Poster" /></Link>
                     <div class="overlay">
-                        <div class="ratings">
-                            <h3>Rating:80%</h3>
+                        <div className="movie-desc">
+                            <div class="ratings">
+                                <h3>Rating:80%</h3>
+                            </div>
+                            <p>After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more...</p>
+                            <div class="button-container"><Link to="/moviepage"><button class="button">More Info</button></Link></div>
                         </div>
-                        <p>After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more...</p>
-                        <div class="button-container"><Link to="/moviepage"><button class="button">More Info</button></Link></div>
                     </div>
                 </div>
                 <div class="title-info">
