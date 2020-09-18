@@ -1,8 +1,8 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {APP_FOLDER_NAME} from './globals/variables';
 // Components
 import Header from './components/Header';
-
 import Footer from './components/Footer';
 // Pages
 import Home from './components/Home';
@@ -14,10 +14,9 @@ import PageNotFound from './components/PageNotFound';
 class AppRouter extends React.Component {
 	render() {
 		return (
-			<Router>
+			<Router basename = {APP_FOLDER_NAME}>
 				<div>
 					<Header />
-					
 					<Switch>
 						<Route path="/" exact><Home /></Route>
 						<Route path="/about"><About /></Route>
@@ -28,7 +27,6 @@ class AppRouter extends React.Component {
 					<Footer />
 				</div>
 			</Router>
-			
 		)
 	}
 }
