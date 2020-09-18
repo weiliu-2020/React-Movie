@@ -54,16 +54,15 @@
                         overflow: hidden;
                         margin: 0 5px 0 5px;
                         flex-shrink: 1;
-                        font-size: 1.2vw;
+                        font-size: 1.5vwax;
+                        
                     }
                     .button-container {
                         margin: 0;
                         width: 100%;
+                        min-height: 50px;
+                        z-index: 100;
 
-                    }
-                    .button-container:before {
-                        content: '';
-                        background-image: linear-gradient(to bottom, transparent, #b9cecde6);;
                     }
 
                 }
