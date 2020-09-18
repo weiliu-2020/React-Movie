@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 // Components
 import Header from './components/Header';
+import Navbar from './components/Navbar/Navbar';
 
 import Footer from './components/Footer';
 // Pages
@@ -16,7 +17,8 @@ class AppRouter extends React.Component {
 		return (
 			<Router>
 				<div>
-					<Header />
+				<Navbar />
+					
 					
 					<Switch>
 						<Route path="/" exact><Home /></Route>
