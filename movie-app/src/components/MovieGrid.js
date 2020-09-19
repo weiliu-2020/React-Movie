@@ -1,6 +1,7 @@
 import React from 'react';
 import tempImg from '../images/avengers-endgame.jpg';
 import { Link } from 'react-router-dom';
+import setDate from '../utilities/dateMaker';
 
 class MovieGrid extends React.Component {
     render() {
@@ -13,6 +14,7 @@ class MovieGrid extends React.Component {
                         <div className="movie-desc">
                             <div class="ratings">
                                 <h3>Rating:80%</h3>
+        <h3>{setDate()}</h3>
                             </div>
                             <p>After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more...</p>
                             <div class="button-container"><Link to="/moviepage"><button class="button">More Info</button></Link></div>
