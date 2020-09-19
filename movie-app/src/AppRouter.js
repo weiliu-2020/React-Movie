@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import {APP_FOLDER_NAME} from './globals/variables';
 // Components
+import Header from './components/Header';
 import Navbar from './components/Navbar/Navbar';
 
 import Footer from './components/Footer';
