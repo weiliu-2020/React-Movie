@@ -3,8 +3,9 @@
 .container { 
     display: grid;
     grid-template-columns: 1fr;
-    margin: 0 30px 0 30px;
-    grid-gap: 10px 20px;
+    margin: 0 15vmax 0 15vmax;
+    row-gap: 6vmax;
+    column-gap: 6vmax;
     text-align: center;
     .movie {
         height: auto;
@@ -76,8 +77,10 @@
 
 @media (min-width: 600px) {
     .container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 15px 30px;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 5vmax 0 5vmax;
+        row-gap: 5vmax;
+        column-gap: 5vmax;
  
     }
 }
@@ -85,6 +88,7 @@
 @media (min-width: 1024px) {
     .container {
         grid-template-columns: repeat(4, 1fr);
+        row-gap: 5vmax;
   
         
     }
