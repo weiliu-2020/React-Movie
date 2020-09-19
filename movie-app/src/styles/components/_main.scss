@@ -5,3 +5,19 @@ body {
     background: $bodyBgGradient;
     background-color: $bodyBgColor;
 }
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    margin: 35px;
+    margin-bottom: 200px;
+    p {
+        margin: 5px 25px 5px 25px;
+    }
+}
+
+p {
+    text-align: left;
+}

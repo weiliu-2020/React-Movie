@@ -1,11 +1,2 @@
 @use './base/variables' as *;
 
-
-@media (min-width: 1024px) {
-    .container .movie img {
-        transition: all .5s ease;
-    }
-    .container .movie a:hover img {
-        transform: scale(1.3);
-    }
-}

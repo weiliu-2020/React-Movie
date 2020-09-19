@@ -3,106 +3,89 @@
 .container { 
     display: grid;
     grid-template-columns: 1fr;
+    margin: 0 30px 0 30px;
+    grid-gap: 10px 20px;
+    text-align: center;
     .movie {
-        padding: 30px 50px;
-        img {
-            display: block;
-            margin: 0 auto;
-            box-shadow: 0 0 0.05rem rgba(204,204,204,.15), 
-            0 0 0.15rem rgba(204,204,204,.15), 
-            0 0 0.25rem rgba(204,204,204,.15), 
-            0 0 0.35rem rgba(204,204,204,.15), 
-            0 0 0.45rem rgba(204,204,204,.15), 
-            0 0 0.55rem rgba(204,204,204,.15),
-            0 0 0.65rem rgba(204,204,204,.15);
-            
+        height: auto;
+        .poster-container {
+            position: relative;
+            width: 100%;
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+                box-shadow: 0 0 0.05rem rgba(204,204,204,.15), 
+                0 0 0.15rem rgba(204,204,204,.15), 
+                0 0 0.25rem rgba(204,204,204,.15), 
+                0 0 0.35rem rgba(204,204,204,.15), 
+                0 0 0.45rem rgba(204,204,204,.15), 
+                0 0 0.55rem rgba(204,204,204,.15),
+                0 0 0.65rem rgba(204,204,204,.15);      
+            }
+            .overlay {
+                display: block;
+                position: absolute;              
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: #b9cecde6;
+                color: black;
+                button:active,
+                button:focus,
+                button:hover {
+                    background-color: white;
+                }
+                .movie-desc {
+                    height: 90%;
+                    width: 90%;
+                    margin: 5%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    p {
+                        overflow: hidden;
+                        margin: 0 5px 0 5px;
+                        flex-shrink: 1;
+                        font-size: 1.5vwax;
+                        
+                    }
+                    .button-container {
+                        margin: 0;
+                        width: 100%;
+                        min-height: 50px;
+                        z-index: 100;
+
+                    }
+
+                }
+            }
         }
-        h2, h3 {
-            text-align: center;
+        .poster-container:hover .overlay {
+            opacity: 1;
         }
-        h3 { 
-            font-style: italic;
-            margin-top: -10px;
-        }
-    }
-    .button-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 25px;
-    }
-    .button {
-        background-color: black;
-        border: 1px solid white;
-        color: white;
-        padding: 10px 25px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 14px;
-        margin: 4px 2px;
-        cursor: pointer;
-    }
-    .button:hover {
-        background-color: white;
-        color: black;
     }
 }
 
 @media (min-width: 600px) {
     .container {
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 15px 10px;
-        padding: 0px 20px;
-        .movie {
-            padding: 15px 25px;
-            p {
-                font-size: 15px;
-            }
-        }
+        grid-gap: 15px 30px;
+ 
     }
 }
 
 @media (min-width: 1024px) {
     .container {
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px 10px;
-        margin: 0px 30px;
-        .movie {
-            margin-bottom: 25px;
-            padding: 0px;
-            display: flex;
-            align-items: center;
-            
-        }
-        .movie-info {
-            padding: 10px;
-            margin: 0px 15px;
-         p {
-            font-size: 14px;
-        }}
-        .button {
-            font-size: 12px;
-            padding: 5px 10px;
-        }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 15px;
-        }
-        h2 {
-            font-size: 25px;
-            margin-top: 0;
-            font-family: $logoText ;
-        }
-        h3 {
-            font-size: 16px;
-            margin-bottom: 0%;
-
-        }.ratings{
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: space-evenly;
-        }
+        grid-template-columns: repeat(4, 1fr);
+  
         
     }
 }

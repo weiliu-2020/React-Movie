@@ -1,8 +1,18 @@
 // Colors 
-$bodyBgColor: black;
-$bodyBgGradient: radial-gradient(ellipse closest-side, rgba(26, 23, 23, 0.781) , rgba(0, 0, 0, 0.767) 100%);
-$bodyTextColor: beige; // just to test out the colours
+$bodyBgColor: rgb(20, 20, 20);
+$bodyBgGradient: radial-gradient(ellipse closest-side, rgba(51, 51, 51, 0.55) , rgba(20, 20, 20, 0.767) 100%);
+$bodyTextColor: #dad4d4; // just to test out the colours
 
 // Type
 $logoText: 'Red Rose', cursive;
 $bodyText: 'Noto Sans', sans-serif;
+/*
+// Colors 
+$bodyBgColor: rgb(20, 20, 20);
+$bodyBgGradient: radial-gradient(circle farthest-side, rgb(51, 51, 51, 0.55) , rgba(20, 20, 20, 0.767) 100%);
+$bodyTextColor: #ffffff;
+
+// Type
+$logoText: 'Red Rose', cursive;
+$bodyText: 'Noto Sans', sans-serif;
+*/
