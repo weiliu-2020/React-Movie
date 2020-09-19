@@ -3,9 +3,7 @@ import MovieGrid from './MovieGrid';
 import SearchBar from './SearchBar';
 import TitleFilter from './TitleFilter';
 
-
 const Home = () => {
-
 
         useEffect(() => { 
             const fetchMovie = async () => {
@@ -26,6 +24,5 @@ const Home = () => {
         </main>
         )
     };
-
 
 export default Home;
