@@ -16,7 +16,7 @@ const Home = () => {
             const popularResponse = await fetch(URL_POPULAR + API_KEY)
             let data = await popularResponse.json(); 
             console.log(data);
-            let filmArray = data.results;
+            let filmArray = data.results.slice(0,12);
                 for (let key in filmArray) {
                     if (filmArray.hasOwnProperty(key)) {
                         console.log(filmArray[key].title);
