@@ -22,7 +22,7 @@ const Home = () => {
         <main>
             <section>
                 <SearchBar />
-                <TitleFilter />
+                <TitleFilter movies = {movies} />
                 { movies != null && <MovieGrid movies = {movies} />}
             </section>
         </main>
