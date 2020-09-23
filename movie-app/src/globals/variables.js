@@ -5,6 +5,7 @@ export const URL_POPULAR      = 'https://api.themoviedb.org/3/movie/popular';
 export const URL_TOP_RATED    = 'https://api.themoviedb.org/3/movie/top_rated';
 export const URL_UPCOMING     = 'https://api.themoviedb.org/3/movie/upcoming';
 export const URL_NOW_PLAYING  = 'https://api.themoviedb.org/3/movie/now_playing';
+export const URL_MOVIE        = 'https://api.themoviedb.org/3/movie/';
 
 // General App Settings
 export const APP_FOLDER_NAME  = '/movie-app';

@@ -4,7 +4,6 @@
     margin: 35px;
     img {
         display: block;
-    
         border: 1px solid #56C7F5;
     }
     h1, h3 {
@@ -24,16 +23,16 @@
         margin: 0px;
         padding: 10px;
     }
-
 }
 
 @media (min-width: 750px) {
     .movie-page-container {
         display: flex;
+        justify-content: center;
         align-items: center;
     }
     .movie-page-info {
-        width: 70%;
+        width: 60%;
         padding: 20px;
     }
 }
@@ -41,6 +40,8 @@
 @media (min-width: 1200px) {
     .movie-page-container {
         padding: 15px;
+        width: 70%;
+        margin: 0 auto;
     }
     img {
         width: 60%;
