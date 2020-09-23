@@ -11,11 +11,10 @@ class Navbar extends Component {
         this.setState({ clicked: !this.state.clicked })
     }
 
-
     render() {
         return(
             <header>
-                <h1 className="navbar-logo">Cinemall</h1>
+            <h1 className="navbar-logo"><NavLink to="/">Cinemall</NavLink></h1>
             <nav className="NavbarItems">
             <div className="menu-icon" onClick={this.handleClick}>
                 <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
