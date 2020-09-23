@@ -26,12 +26,12 @@ class AppRouter extends React.Component {
 				<Switch>
 					<Route path="/" exact><Home /></Route>
 					<Route path="/about"><About /></Route>
-					<Route path="/favourites"><Favourites /></Route>
-					<Route path="/movie-page/:movieid"><MoviePage /></Route>
-					<Route path="/popular"><Popular /></Route>
-					<Route path="/top-rated"><TopRated /></Route>
-					<Route path="/now-playing"><NowPlaying /></Route>
-					<Route path="/upcoming"><Upcoming /></Route>
+					<Route path="/favourites" exact><Favourites /></Route>
+					<Route path="/popular" exact><Popular /></Route>
+					<Route path="/top-rated" exact><TopRated /></Route>
+					<Route path="/now-playing" exact><NowPlaying /></Route>
+					<Route path="/upcoming" exact><Upcoming /></Route>
+					<Route path="/:movieid"><MoviePage /></Route>
 					<Route><PageNotFound /></Route>
 				</Switch>
 				<Footer />

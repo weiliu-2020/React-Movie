@@ -1,9 +1,11 @@
 import React from 'react';
+import {useParams} from 'react-router-dom';
 import tempImg from '../images/avengers-endgame.jpg';
 
-class MoviePage extends React.Component {
+const MoviePage = () => {
 
-    render() {
+    const {movieid} = useParams();
+    console.log(movieid);
 
         return (
             <main>
@@ -25,7 +27,5 @@ class MoviePage extends React.Component {
             </main>
             );
         }
- }
         
-
 export default MoviePage;

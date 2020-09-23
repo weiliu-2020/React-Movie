@@ -15,7 +15,10 @@ const MovieGrid = (props) => {
                         <div className="movie-desc">
                             <div className="ratings"><h3>{movie.vote_average}/10</h3></div>
                             <p>{movie.overview}</p>
-                            <div className="button-container"><Link to={`/movie-page/${movie.id}`}><button className="button">More Info</button></Link></div>
+                            <div className="button-container">
+                                <Link to={`/${movie.id}`}>
+                                <button className="button">More Info</button></Link>
+                            </div>
                         </div>
                     </div>
                     </div>
@@ -24,8 +27,7 @@ const MovieGrid = (props) => {
                         <h3>{movie.release_date}</h3>
                     </div>
                 </div>
-            );
-        });
+        )});
     }
     
     return (
