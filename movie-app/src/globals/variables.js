@@ -10,3 +10,4 @@ export const URL_NOW_PLAYING  = 'https://api.themoviedb.org/3/movie/now_playing'
 export const APP_FOLDER_NAME  = '/movie-app';
 
 // LocalStorage Defaults
+export const STORAGE_YOUR_MOVIES = 'movie-app-your-favourites';
