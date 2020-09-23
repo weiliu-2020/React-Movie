@@ -23,18 +23,18 @@ class AppRouter extends React.Component {
 			<Router basename = {APP_FOLDER_NAME}>
 				<div>
 				<Navbar />
-					<Switch>
-						<Route path="/" exact><Home /></Route>
-						<Route path="/about"><About /></Route>
-						<Route path="/favourites"><Favourites /></Route>
-						<Route path="/movie-page"><MoviePage /></Route>
-						<Route path="/popular"><Popular /></Route>
-						<Route path="/top-rated"><TopRated /></Route>
-						<Route path="/now-playing"><NowPlaying /></Route>
-						<Route path="/upcoming"><Upcoming /></Route>
-						<Route><PageNotFound /></Route>
-					</Switch>
-					<Footer />
+				<Switch>
+					<Route path="/" exact><Home /></Route>
+					<Route path="/about"><About /></Route>
+					<Route path="/favourites"><Favourites /></Route>
+					<Route path="/movie-page/:movieid"><MoviePage /></Route>
+					<Route path="/popular"><Popular /></Route>
+					<Route path="/top-rated"><TopRated /></Route>
+					<Route path="/now-playing"><NowPlaying /></Route>
+					<Route path="/upcoming"><Upcoming /></Route>
+					<Route><PageNotFound /></Route>
+				</Switch>
+				<Footer />
 				</div>
 			</Router>
 		)
