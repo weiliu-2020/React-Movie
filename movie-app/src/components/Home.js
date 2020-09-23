@@ -7,7 +7,6 @@ const Home = () => {
     return (
         <MainSection sort={URL_POPULAR} />
     )
-
 };
 
 export default Home;
