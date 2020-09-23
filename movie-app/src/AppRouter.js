@@ -11,6 +11,11 @@ import About from './components/About';
 import Favourites from './components/Favourites';
 import MoviePage from './components/MoviePage';
 import PageNotFound from './components/PageNotFound';
+// Movie Filter Sort
+import Popular from './components/Popular';
+import TopRated from './components/TopRated';
+import NowPlaying from './components/NowPlaying';
+import Upcoming from './components/Upcoming';
 
 class AppRouter extends React.Component {
 	render() {
@@ -18,13 +23,15 @@ class AppRouter extends React.Component {
 			<Router basename = {APP_FOLDER_NAME}>
 				<div>
 				<Navbar />
-					
-					
 					<Switch>
 						<Route path="/" exact><Home /></Route>
 						<Route path="/about"><About /></Route>
 						<Route path="/favourites"><Favourites /></Route>
-						<Route path="/moviepage"><MoviePage /></Route>
+						<Route path="/movie-page"><MoviePage /></Route>
+						<Route path="/popular"><Popular /></Route>
+						<Route path="/top-rated"><TopRated /></Route>
+						<Route path="/now-playing"><NowPlaying /></Route>
+						<Route path="/upcoming"><Upcoming /></Route>
 						<Route><PageNotFound /></Route>
 					</Switch>
 					<Footer />

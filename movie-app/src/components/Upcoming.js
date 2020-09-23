@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import MovieGrid from './MovieGrid';
 import SearchBar from './SearchBar';
 import TitleFilter from './TitleFilter';
-import {URL_POPULAR, API_KEY} from '../globals/variables';
+import {URL_UPCOMING, API_KEY} from '../globals/variables';
 
 const Home = () => {
 
@@ -10,8 +10,8 @@ const Home = () => {
 
     useEffect(() => { 
         const fetchMovie = async () => {
-            const popularResponse = await fetch(URL_POPULAR + API_KEY)
-            let data = await popularResponse.json(); 
+            const res = await fetch(URL_UPCOMING + API_KEY)
+            let data = await res.json(); 
             let filmArray = data.results.slice(0,12);
             setMovies(filmArray) 
             }

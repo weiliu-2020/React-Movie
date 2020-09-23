@@ -1,16 +1,18 @@
-import React, {useEffect, useState} from 'react';
-import {URL_POPULAR, URL_TOP_RATED, URL_UPCOMING, URL_NOW_PLAYING, API_KEY} from '../globals/variables';
+import React from 'react';
+import {NavLink} from 'react-router-dom';
 
-const TitleFilter = () => {
-
+class TitleFilter extends React.Component  {
+    render() {
         return (
             <ul class="filters">
-                <li class="filter">Popular</li>
-                <li class="filter" onClick={filterTopRated}>Top Rated</li>
-                <li class="filter">Upcoming</li>
-                <li class="filter">Now Playing</li>
+                <li class="filter"><NavLink to="/popular">Popular</NavLink></li>
+                <li class="filter"><NavLink to="/top-rated">Top Rated</NavLink></li>
+                <li class="filter"><NavLink to="/upcoming">Upcoming</NavLink></li>
+                <li class="filter"><NavLink to="/now-playing">Now Playing</NavLink></li>
             </ul>
         )
+
+    }  
 };
 
 export default TitleFilter;
