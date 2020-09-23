@@ -1,18 +1,16 @@
 import React from 'react';
-import tempImg from '../images/avengers-endgame.jpg';
-import makeDate from '../utilities/dateMaker';
 import { Link } from 'react-router-dom';
-import setDate from '../utilities/dateMaker';
 
 const MovieGrid = (props) => {
 
     const movieDivs = () => {
 
         return props.movies.map((movie, i) => {
+
             return (
                 <div className={`movie movie-0${i}`} key={i}>
                     <div className="poster-container">
-                    <img className="poster-img" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt="Avengers Endgame Poster" />
+                    <img className="poster-img" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
                     <div class="overlay">
                         <div className="movie-desc">
                             <div className="ratings"><h3>{movie.vote_average}/10</h3></div>

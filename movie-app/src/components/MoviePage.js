@@ -1,9 +1,9 @@
 import React from 'react';
 import tempImg from '../images/avengers-endgame.jpg';
-//import { Link } from 'react-router-dom';
 
 class MoviePage extends React.Component {
     render() {
+
         return (
         <main>
             <section>
