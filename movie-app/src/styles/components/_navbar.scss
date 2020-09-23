@@ -18,8 +18,12 @@
         text-transform: uppercase;
         margin-left: 20px;
         color: #dad4d4;
-        text-decoration: none;
         cursor: pointer;
+        .active {
+            text-decoration: none;
+            color: #dad4d4;
+        }
+
 }
 
 .nav-menu {
