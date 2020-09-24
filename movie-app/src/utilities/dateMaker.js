@@ -1,14 +1,7 @@
-
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-const setDate = () => {
-    // let strDate = obj.date.split(' ')[0] + 'Z';
-    let date = new Date();
-    let monthName = months[date.getMonth()];
-    let yearName = date.getFullYear();
-    let dayNumber = date.getDate();
-    return `${monthName} ${dayNumber}, ${yearName}`;
+const makeDate = () => {
+    const months = ['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const today = new Date();
+    return `${months[today.getMonth()]} ${today.getFullYear()}`;
 }
 
-
-export default setDate;
+export default makeDate;
