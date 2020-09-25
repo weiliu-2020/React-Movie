@@ -1,5 +1,6 @@
 import React from 'react';
 import makeDate from '../utilities/dateMaker';
+import TMDBlogo from '../images/TMDBlogo.svg';
 
 class About extends React.Component {
     render() {
@@ -13,8 +14,11 @@ class About extends React.Component {
                         <p>Please feel free to browse through the selections.If there are any movies that interest you, go ahead and add to your Favourites!</p>
                     </div>
                     <div className="credits">
-                        <i class="fas fa-film"></i>
-                        <p class="education">API provided by <a href="https://www.themoviedb.org/" target="_blank">The Movie Database</a>. For educational purposes only.</p>
+                        <div className="logo">
+                        <img src={TMDBlogo} alt="Movie Database Logo"></img>
+                        </div>
+                        <p class="education">This product uses the TMDb API but is not endorsed or certified by <a href="https://www.themoviedb.org/" target="_blank"> TMDb. </a>For educational purposes only.</p>
+                       
                     </div>
                 </div>
             </article>
