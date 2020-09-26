@@ -17,7 +17,7 @@ class About extends React.Component {
                         <div className="logo">
                         <img src={TMDBlogo} alt="Movie Database Logo"></img>
                         </div>
-                        <p class="education">This product uses the TMDb API but is not endorsed or certified by <a href="https://www.themoviedb.org/" target="_blank"> TMDb. </a>For educational purposes only.</p>
+                        <p className="education">This product uses the TMDb API but is not endorsed or certified by <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer"> TMDb. </a>For educational purposes only.</p>
                        
                     </div>
                 </div>

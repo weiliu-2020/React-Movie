@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {URL_MOVIE, API_KEY} from '../globals/variables';
 import {useParams} from 'react-router-dom';
+import {getStorage} from '../utilities/storageMaker';
 
 const MoviePage = () => {
 
