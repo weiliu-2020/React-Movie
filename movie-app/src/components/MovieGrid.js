@@ -20,7 +20,7 @@ const MovieGrid = (props) => {
                             <div className="ratings"><h3>{movie.vote_average}/10</h3></div>
                             <p>{movie.overview}</p>
                             <div className="button-container">
-                                <Link to={`/${movie.id}`}><button id="more-info" className="button">More Info</button></Link>
+                                <Link to={`/${movie.id}`}><button className="button more-info">More Info</button></Link>
                                 <Link to="/favourites"><button id="favourites" className="button" onClick={handleClick}>Add to Favourites</button></Link>
                             </div>
                         </div>

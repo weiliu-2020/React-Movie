@@ -28,6 +28,9 @@ const Favourites = () => {
         }
     ];
 
+    function removeClick() {
+        console.log('Insert code to remove the movie.');
+    }
 
     return (
         <div className="container">
@@ -40,7 +43,10 @@ const Favourites = () => {
                     <h3>{sampleArray[0].date}</h3>
                 </div>
                 <p>{sampleArray[0].summary}</p>
-                <div className="button-container"><Link to={`/${sampleArray[0].id}`}><button id="more-info" className="button">More Info</button></Link></div>
+                <div className="button-container">
+                    <Link to={`/${sampleArray[0].id}`}><button className="button more-info">More Info</button></Link>
+                    <Link to="/favourites"><button id="remove" className="button" onClick={removeClick}>Remove</button></Link>
+                </div>
             </div>
         </div>
         <div className="movie movie-02">
@@ -52,7 +58,10 @@ const Favourites = () => {
                     <h3>{sampleArray[1].date}</h3>
                 </div>
                 <p>{sampleArray[1].summary}</p>
-                <div className="button-container"><Link to="/moviepage"><button className="button">More Info</button></Link></div>
+                <div className="button-container">
+                    <Link to="/moviepage"><button className="button">More Info</button></Link>
+                    <Link to="/favourites"><button className="button" onClick={removeClick}>Remove</button></Link>
+                </div>
             </div>        
         </div>
         <div className="movie movie-03">
@@ -64,7 +73,10 @@ const Favourites = () => {
                     <h3>{sampleArray[2].date}</h3>
                 </div>
                 <p>{sampleArray[2].summary}</p>
-                <div className="button-container"><Link to="/moviepage"><button className="button">More Info</button></Link></div>
+                <div className="button-container">
+                    <Link to="/moviepage"><button className="button">More Info</button></Link>
+                    <Link to="/favourites"><button className="button" onClick={removeClick}>Remove</button></Link>
+                </div>
             </div>
         </div>
         <div className="movie movie-04">
@@ -76,7 +88,10 @@ const Favourites = () => {
                     <h3>Jan 1, 1970</h3>
                 </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                <div className="button-container"><Link to="/moviepage"><button className="button">More Info</button></Link></div>
+                <div className="button-container">
+                    <Link to="/moviepage"><button className="button">More Info</button></Link>
+                    <Link to="/favourites"><button className="button" onClick={removeClick}>Remove</button></Link>
+                </div>
             </div>
         </div>
     </div>
