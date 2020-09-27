@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 const MovieGrid = (props) => {
 
     const movieDivs = () => {
+        
+        function handleClick() {
+            console.log('The link was clicked.');
+        }
 
         return props.movies.map((movie, i) => {
 
@@ -17,7 +21,7 @@ const MovieGrid = (props) => {
                             <p>{movie.overview}</p>
                             <div className="button-container">
                                 <Link to={`/${movie.id}`}><button id="more-info" className="button">More Info</button></Link>
-                                <Link to="/favourites"><button id="favourites" className="button">Add to Favourites</button></Link>
+                                <Link to="/favourites"><button id="favourites" className="button" onClick={handleClick}>Add to Favourites</button></Link>
                             </div>
                         </div>
                     </div>
