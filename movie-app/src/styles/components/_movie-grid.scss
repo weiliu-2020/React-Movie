@@ -73,7 +73,6 @@
                         width: 100%;
                         min-height: 50px;
                         z-index: 100;
-
                     }
                     
                     button {
@@ -87,8 +86,9 @@
                         background-color: #0f698d;
                         color: white;
                     }
-                    
-
+                    #more-info {
+                        margin-right: 10px;
+                    }
                 }
             }
         }
