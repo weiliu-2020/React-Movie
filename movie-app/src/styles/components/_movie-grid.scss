@@ -86,15 +86,15 @@
                         background-color: #0f698d;
                         color: white;
                     }
-                    .more-info {
-                        margin-right: 10px;
-                    }
                 }
             }
         }
         .poster-container:hover .overlay {
             opacity: 1;
         }
+    }
+    .more-info {
+        margin-right: 10px;
     }
 }
 
@@ -112,7 +112,5 @@
     .container {
         grid-template-columns: repeat(4, 1fr);
         row-gap: 5vmax;
-  
-        
     }
 }
