@@ -5,7 +5,8 @@ const MovieGrid = (props) => {
 
     const movieDivs = () => {
         
-        function handleClick() {
+        function handleClick(e) {
+            e.preventDefault();
             console.log('The link was clicked.');
         }
 
@@ -21,7 +22,7 @@ const MovieGrid = (props) => {
                             <p>{movie.overview}</p>
                             <div className="button-container">
                                 <Link to={`/${movie.id}`}><button className="button more-info">More Info</button></Link>
-                                <Link to="/favourites"><button id="favourites" className="button" onClick={handleClick}>Add to Favourites</button></Link>
+                                <button id="favourites" className="button" onClick={handleClick}>Add to Favourites</button>
                             </div>
                         </div>
                     </div>

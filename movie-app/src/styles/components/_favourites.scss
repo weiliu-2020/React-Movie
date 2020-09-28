@@ -1,0 +1,32 @@
+.container .text-box{
+    grid-template: none;
+}
+.text-box {
+    margin-top: 30px;
+    h2{
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 50px;    
+}}
+.directions-box{
+    display:flex;
+    text-align: center;
+    margin-bottom: 80px;
+    img{
+        width: 100%;
+    }
+}
+.directions-left{
+    border: 1px solid #56C7F5;
+    width: 35%;
+    margin: auto;
+    display: block;
+    justify-items: center;
+}
+.directions-right{
+    border: 1px solid #56C7F5;
+    width: 35%;
+    margin: auto;
+    display: block;
+    justify-items: center;
+}

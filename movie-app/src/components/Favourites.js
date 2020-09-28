@@ -1,6 +1,7 @@
 import React from 'react';
 import tempImg from '../images/avengers-endgame.jpg';
 import { Link } from 'react-router-dom';
+import about1 from '../images/favs2.png';
 
 const Favourites = () => {
     const sampleArray = [
@@ -41,45 +42,63 @@ const Favourites = () => {
     }
 
     const faveDivs = () => {
-        if (sampleArray && sampleArray.length) {
-            return sampleArray.map((fave, i) => {
-                return (
-                    <div className="container">
-                        <div className={`movie movie-0${i}`} key={i}>
-                            <div className="poster-container">
-                                <img className="poster-img" src={tempImg} alt={`${fave.title} poster`} />
-                                <div className="overlay">
-                                    <div className="movie-desc">
-                                        <div className="ratings"><h3>{fave.vote_average}/10</h3></div>
-                                        <p>{fave.overview}</p>
-                                        <div className="button-container">
-                                            <Link to={`/${fave.id}`}><button className="button more-info">More Info</button></Link>
-                                            <Link to="/favourites"><button id="favourites" className="button" onClick={removeClick}>Remove</button></Link>
-                                        </div>
-                                    </div>
+        return sampleArray.map((fave, i) => {
+            return (
+                <div className={`movie movie-0${i}`} key={i}>
+                    <div className="poster-container">
+                        <img className="poster-img" src={tempImg} alt={`${fave.title} poster`} />
+                        <div className="overlay">
+                            <div className="movie-desc">
+                                <div className="ratings"><h3>{fave.vote_average}/10</h3></div>
+                                <p>{fave.overview}</p>
+                                <div className="button-container">
+                                    <Link to={`/${fave.id}`}><button className="button more-info">More Info</button></Link>
+                                    <Link to="/favourites"><button id="favourites" className="button" onClick={removeClick}>Remove</button></Link>
                                 </div>
-                            </div>
-                            <div className="title-info">
-                                <h2>{fave.title}</h2>
-                                <h3>{fave.release_date}</h3>
                             </div>
                         </div>
                     </div>
-                ); 
-            });
-        } else {
-            return (
-                <div className="text-box">
-                    <p>No movies have been added to favourites.</p>
+                    <div className="title-info">
+                        <h2>{fave.title}</h2>
+                        <h3>{fave.release_date}</h3>
+                    </div>
+                </div>      
+            ); 
+        });
+    }
+
+    function YesFaves() {
+        return (
+            <div className="container">
+                {faveDivs()}
+            </div>
+        )
+    }
+
+    function NoFaves() {
+        return (
+            <div className="text-box">
+                <h2>No movies have been added to favourites.</h2>
+                <div className="directions-box">
+                    <div className="directions-left">
+                        <p>To add a movie to your favourites, please hover over any movie with your mouse and click on 'Add to favourites'.</p>
+                        <img src={about1} alt="Adding movie to favorites"></img>
+                    </div>
+                    <div className="directions-right">
+                        <p>Alternatively, you could add a movie to your favourites by doing so directly from the description page of any given movie.</p>
+                        <img src={about1} alt="Adding movie to favorites"></img>
+                    </div>
                 </div>
-            )
-        }
+            </div>
+        )
     }
     
     return (
-        <div className="favourites-container">
-            {faveDivs()}
-        </div>
+        <main>
+            <section>
+                {sampleArray && sampleArray.length ? <YesFaves /> : <NoFaves />}
+            </section>
+        </main>
     )
 }
 
