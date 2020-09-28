@@ -1,10 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import {URL_MOVIE, API_KEY} from '../globals/variables';
+import {URL_MOVIE, API_KEY, STORAGE_YOUR_MOVIES} from '../globals/variables';
 import {useParams} from 'react-router-dom';
-import {getStorage} from '../utilities/storageMaker';
+import {isItemInStorage, getStorage, setStorage, removeFromStorage} from '../utilities/storageMaker';
 
 const MoviePage = () => {
-
+    function handleClick(e) {
+        e.preventDefault();
+        console.log('The link was clicked.');
+    }
     const {movieid}        = useParams();
     const [film, setFilm]  = useState(null);
 
@@ -16,6 +19,18 @@ const MoviePage = () => {
         }
             fetchFilm();
         }, []);
+    const addMovie = () => {
+        if (isItemInStorage(film) === true) {
+            console.log('It is already in your favourites!');
+        } else {
+            const yourMovies = setStorage(film, STORAGE_YOUR_MOVIES, false);
+            setFilm(yourMovies);
+        }
+    }
+    const removeMovie = () => {
+        const yourMovies = removeFromStorage(film.id);
+        setFilm(yourMovies);
+    }
     
     const movieMaker = (obj) => {
         const filmObj = {
@@ -40,7 +55,9 @@ const MoviePage = () => {
                         <h3>{filmObj.date}</h3>
                         <h3>{filmObj.rating} / 10</h3>
                     </div>
+                    <button id="favourites" className="button" onClick={handleClick}>Add to Favourites</button>
                     <p>{filmObj.summary}</p>  
+                    <p>test</p>
                 </div>
             </div>
         );
