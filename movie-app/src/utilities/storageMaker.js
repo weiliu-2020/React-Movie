@@ -1,37 +1,32 @@
-import {STORAGE_YOUR_MOVIES} from '../globals/variables';
+import { STORAGE_YOUR_MOVIES } from '../globals/variables';
 
 export const isItemInStorage = (newItem) => {
-    let yourCurrentMovies = getStorage();
-    if (yourCurrentMovies.find(currentMovie => currentMovie.id === newItem.id)){
-        return true;
+    let yourMovies = getStorage();
+    if(!yourMovies){
+        return false;
     }
-    return false;
+    if(yourMovies.find(yourMovie => yourMovie.id === newItem.id)){
+        return true;
+    }else {
+        return false;
+    }
 }
 
-export const setStorage = (newItem, storageItem = STORAGE_YOUR_MOVIES, test = true) => {
-    if(storageItem === STORAGE_YOUR_MOVIES){
-        const newMovieForStorage = JSON.stringify(newItem);
-        localStorage.setItem(storageItem, newMovieForStorage);
-        return newItem;
-    }else if(storageItem === STORAGE_YOUR_MOVIES){
-        let arrayOfYourMovies;
-        if(test === true){
-            arrayOfYourMovies = isItemInStorage(newItem);
-            if(arrayOfYourMovies === true){
-                console.log('Item already in storage')
-                return false;
-            }
-        }else{
-            arrayOfYourMovies = getStorage();
-        }
-        arrayOfYourMovies.push(newItem);
-        const arrayOfYourMoviesForStorage = JSON.stringify(arrayOfYourMovies);
-        localStorage.setItem(storageItem, arrayOfYourMoviesForStorage);
-        return arrayOfYourMovies;
+export const setStorage = (newItem, storageItem = STORAGE_YOUR_MOVIES) => {
+
+    let yourMovies = getStorage();
+    if( yourMovies !== false){
+       
+        yourMovies.push(newItem);
+
     }else{
-        console.log('Invalid storage item');
-        return false;
-    }    
+        yourMovies = [newItem];
+
+    }
+
+    yourMovies = JSON.stringify(yourMovies);
+    localStorage.setItem(storageItem, yourMovies);
+
 }
 
 export const getStorage = (storageItem = STORAGE_YOUR_MOVIES) => {
@@ -39,19 +34,19 @@ export const getStorage = (storageItem = STORAGE_YOUR_MOVIES) => {
     if(item){
         item = JSON.parse(item);
         return item;
-    }else if(storageItem === STORAGE_YOUR_MOVIES){
-        return [];
-    }else{
+    }else {
         return false;
-    }   
+    }
 }
 
-export const removeFromStorage = (id, storageItem = STORAGE_YOUR_MOVIES) => {
+export const removeFromStorage = (movie, storageItem = STORAGE_YOUR_MOVIES) => {
     let items = getStorage();
-    const isMovie = (current) => current.id === id;
-    let indexOfMovieToRemove = items.findIndex(isMovie);
-    items.splice(indexOfMovieToRemove, 1);
+    const isMovie = (current) => current.id === movie.id;
+    let indexOfItemToRemove = items.findIndex(isMovie);
+    items.splice(indexOfItemToRemove, 1);
     let itemsForStorage = JSON.stringify(items);
     localStorage.setItem(storageItem, itemsForStorage);
     return items;
 }
+
+export default getStorage

@@ -4,61 +4,56 @@ import {useParams} from 'react-router-dom';
 import {isItemInStorage, getStorage, setStorage, removeFromStorage} from '../utilities/storageMaker';
 
 const MoviePage = () => {
-    function handleClick(e) {
-        e.preventDefault();
-        console.log('The link was clicked.');
-    }
-    const {movieid}        = useParams();
-    const [film, setFilm]  = useState(null);
-    const [favMovies, setFavMovies] = useState();
-
-    useEffect(() => { 
-        const fetchFilm = async () => {
-            const response = await fetch(URL_MOVIE + movieid + API_KEY)
-            let data = await response.json(); 
-            setFilm(movieMaker(data));
-        }
-            fetchFilm();
-        }, []);
+    
+    let {movieid} = useParams();
+    const [movie, setMovie]  = useState(null);
+    const [ifFaved, setIfFaved] = useState();
+    
     const addMovie = () => {
-        if (isItemInStorage(film) === true) {
-            console.log('It is already in your favourites!');
-        } else {
-            const yourMovies = setStorage(film, STORAGE_YOUR_MOVIES);
-            setFavMovies(yourMovies);
-        }
+        setStorage(movie);
+        setIfFaved(true);
     }
     const removeMovie = () => {
-        const yourMovies = removeFromStorage(film.id);
-        setFavMovies(yourMovies);
+        removeFromStorage(movie);
+        setIfFaved(false);
     }
+
+    useEffect(() => { 
+        const fetchMovie = async () => {
+            const response = await fetch(URL_MOVIE + movieid + API_KEY)
+            let data = await response.json(); 
+            setMovie(movieMaker(data));
+        }
+            fetchMovie();
+        }, []);
+
     
     const movieMaker = (obj) => {
-        const filmObj = {
+        const movieObj = {
             title: obj.title,
             date: obj.release_date,
             rating: obj.vote_average,
             summary: obj.overview,
             img: obj.poster_path
         }
-        return filmObj;
+        return movieObj;
     }
 
-    const filmDiv = (filmObj) => {
+    const movieDiv = (movieObj) => {
         return (
             <div className="movie-page-container">
                 <div className="movie-page-poster">
-                    <img className="poster-img" src={`https://image.tmdb.org/t/p/w500/${filmObj.img}`} alt={`${filmObj.title} poster`} />
+                    <img className="poster-img" src={`https://image.tmdb.org/t/p/w500/${movieObj.img}`} alt={`${movieObj.title} poster`} />
                 </div>
                 <div className="movie-page-info">
-                    <h1>{filmObj.title}</h1>
+                    <h1>{movieObj.title}</h1>
                     <div className="date-rating">
-                        <h3>{filmObj.date}</h3>
-                        <h3>{filmObj.rating} / 10</h3>
+                        <h3>{movieObj.date}</h3>
+                        <h3>{movieObj.rating} / 10</h3>
                     </div>
                     <button id="favourites" className="button" onClick={addMovie}>Add to Favourites</button>
                     <button id="favourites" className="button" onClick={removeMovie}>Remove from Favourites</button>
-                    <p>{filmObj.summary}</p>  
+                    <p>{movieObj.summary}</p>  
                     <p>test</p>
                 </div>
             </div>
@@ -68,7 +63,7 @@ const MoviePage = () => {
     return (
         <main>
             <section>
-                {film && filmDiv(film)}
+                {movie && movieDiv(movie)}
             </section> 
         </main>
     );
