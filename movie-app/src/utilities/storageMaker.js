@@ -5,7 +5,7 @@ export const isItemInStorage = (newItem) => {
     if(!yourMovies){
         return false;
     }
-    if(yourMovies.find(yourMovie => yourMovie.id === newItem.id)){
+    if(yourMovies.includes(movie => movie.id === newItem.id)){
         return true;
     }else {
         return false;
