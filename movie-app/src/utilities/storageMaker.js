@@ -2,13 +2,10 @@ import {STORAGE_YOUR_MOVIES} from '../globals/variables';
 
 export const isItemInStorage = (newItem) => {
     let yourCurrentMovies = getStorage();
-    if(!yourCurrentMovies){
-        return [];
-    }
-    if(yourCurrentMovies.find(currentMovie => currentMovie.id === newItem.id)){
+    if (yourCurrentMovies.find(currentMovie => currentMovie.id === newItem.id)){
         return true;
     }
-    return yourCurrentMovies;
+    return false;
 }
 
 export const setStorage = (newItem, storageItem = STORAGE_YOUR_MOVIES, test = true) => {

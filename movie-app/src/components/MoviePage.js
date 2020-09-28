@@ -10,6 +10,7 @@ const MoviePage = () => {
     }
     const {movieid}        = useParams();
     const [film, setFilm]  = useState(null);
+    const [favMovies, setFavMovies] = useState();
 
     useEffect(() => { 
         const fetchFilm = async () => {
@@ -23,13 +24,13 @@ const MoviePage = () => {
         if (isItemInStorage(film) === true) {
             console.log('It is already in your favourites!');
         } else {
-            const yourMovies = setStorage(film, STORAGE_YOUR_MOVIES, false);
-            setFilm(yourMovies);
+            const yourMovies = setStorage(film, STORAGE_YOUR_MOVIES);
+            setFavMovies(yourMovies);
         }
     }
     const removeMovie = () => {
         const yourMovies = removeFromStorage(film.id);
-        setFilm(yourMovies);
+        setFavMovies(yourMovies);
     }
     
     const movieMaker = (obj) => {
@@ -55,7 +56,8 @@ const MoviePage = () => {
                         <h3>{filmObj.date}</h3>
                         <h3>{filmObj.rating} / 10</h3>
                     </div>
-                    <button id="favourites" className="button" onClick={handleClick}>Add to Favourites</button>
+                    <button id="favourites" className="button" onClick={addMovie}>Add to Favourites</button>
+                    <button id="favourites" className="button" onClick={removeMovie}>Remove from Favourites</button>
                     <p>{filmObj.summary}</p>  
                     <p>test</p>
                 </div>

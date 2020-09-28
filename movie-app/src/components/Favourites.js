@@ -2,6 +2,7 @@ import React from 'react';
 import tempImg from '../images/avengers-endgame.jpg';
 import { Link } from 'react-router-dom';
 import about1 from '../images/favs2.png';
+import {getStorage} from '../utilities/storageMaker';
 
 const Favourites = () => {
     const sampleArray = [
