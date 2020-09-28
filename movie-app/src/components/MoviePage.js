@@ -34,7 +34,8 @@ const MoviePage = () => {
             date: obj.release_date,
             rating: obj.vote_average,
             summary: obj.overview,
-            img: obj.poster_path
+            img: obj.poster_path,
+            id: obj.id
         }
         return movieObj;
     }
