@@ -55,7 +55,7 @@ const MoviePage = () => {
                     {ifFaved ? <button id="favourites" className="button" onClick={removeMovie}>Remove from Favourites</button> : 
                     <button id="favourites" className="button" onClick={addMovie}>Add to Favourites</button>}
                     <p>{movieObj.summary}</p>  
-                    <p>test</p>
+                    
                 </div>
             </div>
         );
