@@ -14,7 +14,7 @@ const MovieGrid = (props) => {
                     <img className="poster-img" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={`${movie.title} poster`} />
                     <div className="overlay">
                         <div className="movie-desc">
-                            <div className="ratings"><h3>{movie.vote_average}/10</h3></div>
+                            <div className="ratings"><h3>Rating: {movie.vote_average}/10</h3></div>
                             <p>{movie.overview}</p>
                             <div className="button-container">
                                 <Link to={`/${movie.id}`}><button className="button more-info">More Info</button></Link>
