@@ -1,21 +1,34 @@
 import React, {useEffect, useState} from 'react';
-import {URL_MOVIE, API_KEY, STORAGE_YOUR_MOVIES} from '../globals/variables';
+import {URL_MOVIE, API_KEY} from '../globals/variables';
 import {useParams} from 'react-router-dom';
-import {isItemInStorage, getStorage, setStorage, removeFromStorage} from '../utilities/storageMaker';
+import {isItemInStorage, setStorage, removeFromStorage} from '../utilities/storageMaker';
 
 const MoviePage = () => {
     
     let {movieid} = useParams();
     const [movie, setMovie]  = useState(null);
-    const [ifFaved, setIfFaved] = useState();
+    const [ifFaved, setIfFaved] = useState([]);
     
     const addMovie = () => {
-        setStorage(movie);
+        if(!isItemInStorage(movie)){
+            setStorage(movie);
         setIfFaved(true);
+        /* for testing
+        console.log(movie);*/
+
+        }else{
+        /* for testing
+        console.log('item already exists!');*/
+        setIfFaved(false);
+        }
+        
     }
     const removeMovie = () => {
         removeFromStorage(movie);
         setIfFaved(false);
+        /* for testing
+        console.log(movie);*/
+
     }
 
     useEffect(() => { 
@@ -52,7 +65,7 @@ const MoviePage = () => {
                         <h3>{movieObj.date}</h3>
                         <h3>{movieObj.rating} / 10</h3>
                     </div>
-                    {ifFaved ? <button id="favourites" className="button" onClick={removeMovie}>Remove from Favourites</button> : 
+                    {isItemInStorage(movie) ? <button id="favourites" className="button" onClick={removeMovie}>Remove from Favourites</button> : 
                     <button id="favourites" className="button" onClick={addMovie}>Add to Favourites</button>}
                     <p>{movieObj.summary}</p>  
                     <p>test</p>

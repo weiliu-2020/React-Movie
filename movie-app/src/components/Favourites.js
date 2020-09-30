@@ -1,5 +1,4 @@
 import React from 'react';
-import tempImg from '../images/avengers-endgame.jpg';
 import { Link } from 'react-router-dom';
 import about1 from '../images/favs2.png';
 import {getStorage} from '../utilities/storageMaker';
@@ -8,9 +7,7 @@ const Favourites = () => {
     const faveStorageString = getStorage();
     const sampleArray = faveStorageString;
 
-    function removeClick() {
-        console.log('Insert code to remove the movie.');
-    }
+
 
     const faveDivs = () => {
         return sampleArray.map((fave, i) => {
@@ -31,7 +28,7 @@ const Favourites = () => {
                     </div>
                     <div className="title-info">
                         <h2>{fave.title}</h2>
-                        <h3>{fave.release_date}</h3>
+                        <h3>{fave.date}</h3>
                     </div>
                 </div>      
             ); 

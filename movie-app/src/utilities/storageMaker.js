@@ -3,27 +3,22 @@ import { STORAGE_YOUR_MOVIES } from '../globals/variables';
 export const isItemInStorage = (newItem) => {
     let yourMovies = getStorage();
     if(!yourMovies){
-        return false;
+        return [];
     }
-    if(yourMovies.includes(movie => movie.id === newItem.id)){
+    if(yourMovies.find(movie => movie.id === newItem.id)){
         return true;
-    }else {
-        return false;
     }
+    return false;
 }
 
 export const setStorage = (newItem, storageItem = STORAGE_YOUR_MOVIES) => {
 
     let yourMovies = getStorage();
-    if( yourMovies !== false){
-       
+    if( yourMovies !== false){      
         yourMovies.push(newItem);
-
     }else{
         yourMovies = [newItem];
-
     }
-
     yourMovies = JSON.stringify(yourMovies);
     localStorage.setItem(storageItem, yourMovies);
 
