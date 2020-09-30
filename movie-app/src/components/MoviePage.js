@@ -18,7 +18,7 @@ const MoviePage = () => {
 
         }else{
         /* for testing
-        console.log('item already exists!');*/
+        console.log('item already exists!'); */
         setIfFaved(false);
         }
         
@@ -38,7 +38,7 @@ const MoviePage = () => {
             setMovie(movieMaker(data));
         }
             fetchMovie();
-        }, [movieid]);
+        }, []);
 
     
     const movieMaker = (obj) => {

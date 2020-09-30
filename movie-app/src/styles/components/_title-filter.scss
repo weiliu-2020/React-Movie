@@ -24,17 +24,11 @@
 .filter>a {
     text-decoration: none;
     color: #a4daf0;
+    text-shadow: 2px 2px 2px black;
+    font-size: 1.2em;
 }
-.filter:hover,
-.filter:active,
-.filter:focus {
-    color: #56C7F5;
-}
-.filter>a:hover,
-.filter>a:active,
-.filter>a:focus {
-    color: #56C7F5;
-}
+
+
 .filter>a {
     margin-bottom: 5px;
 }
@@ -46,7 +40,7 @@
     left: 0%;
     width: 0%;
     background: #76F9FB;
-    box-shadow: 0 1px 1px;
+    box-shadow: 0 1px 1px #76F9FB;
     border-radius: 3px;
     -o-transition:.5s;
   	-ms-transition:.5s;
@@ -58,6 +52,22 @@
 }
 .filter:hover:after {
     width: 100%;
+}
+.filter .active {
+    color: #56C7F5;
+    text-shadow: 2px 2px 2px black;
+}
+
+.filter.active:after {
+    content: '';
+    height: 4px;
+    bottom: -10px;
+    width: 100%;
+    left: 0%;
+    width: 0%;
+    background: #76F9FB;
+    box-shadow: 0 1px 1px;
+    border-radius: 3px;    
 }
 
 /*a simpler underline with less effect
