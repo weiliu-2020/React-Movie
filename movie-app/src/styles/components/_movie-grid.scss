@@ -76,9 +76,10 @@
                     }
                     
                     button {
-                        border: 1px black solid;
+                        border: 1px black dotted;
                         font-size: 1em;
                         border-radius: 5px;
+                        outline: none;
                     }
                     button:active,
                     button:focus,

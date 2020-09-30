@@ -38,7 +38,7 @@ const MoviePage = () => {
             setMovie(movieMaker(data));
         }
             fetchMovie();
-        }, []);
+        }, [movieid]);
 
     
     const movieMaker = (obj) => {
@@ -65,10 +65,9 @@ const MoviePage = () => {
                         <h3>{movieObj.date}</h3>
                         <h3>{movieObj.rating} / 10</h3>
                     </div>
-                    {isItemInStorage(movie) ? <button id="favourites" className="button" onClick={removeMovie}>Remove from Favourites</button> : 
-                    <button id="favourites" className="button" onClick={addMovie}>Add to Favourites</button>}
+                    {isItemInStorage(movie) ? <button id="fav_button" className="button" onClick={removeMovie}>Remove from Favourites</button> : 
+                    <button id="fav_button" className="button" onClick={addMovie}>Add to Favourites</button>}
                     <p>{movieObj.summary}</p>  
-                    <p>test</p>
                 </div>
             </div>
         );

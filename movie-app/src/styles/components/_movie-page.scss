@@ -24,6 +24,14 @@
         padding: 10px;
     }
 }
+#fav_button {
+    border: 1px black solid;
+    font-size: 1em;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    outline: none;
+}
 
 @media (min-width: 750px) {
     .movie-page-container {
