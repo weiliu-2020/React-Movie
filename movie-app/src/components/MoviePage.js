@@ -38,7 +38,7 @@ const MoviePage = () => {
             setMovie(movieMaker(data));
         }
             fetchMovie();
-        }, []);
+        }, [movieid]);
 
     
     const movieMaker = (obj) => {

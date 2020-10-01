@@ -16,7 +16,7 @@ const MainSection = ({ sort }) => {
             setMovies(filmArray) 
             }
             fetchMovie();
-        }, []);
+        }, [sort]);
         
     return (
         <main>

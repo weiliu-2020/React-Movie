@@ -1,8 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import moneyPlane from '../images/about-image-1.png';
 import ava from '../images/about-image-2.png';
-import {removeFromStorage, isItemInStorage} from '../utilities/storageMaker';
 
 const Favourites = () => {
 
