@@ -7,6 +7,8 @@
     text-align: center;
     font-size: 1.4rem;
     margin-bottom: 50px;    
+    margin-left: 20px;
+    margin-right: 20px;
 }}
 .directions-box{
     // display:flex;
@@ -17,8 +19,8 @@
     }
     p{
         margin: 0 auto;
-        padding-left: 90px;
-        padding-right: 90px;
+        padding-left: 50px;
+        padding-right: 50px;
         margin-bottom: 20px;
     }
 }
@@ -35,4 +37,11 @@
     margin: auto;
     display: block;
     justify-items: center;
+}
+
+@media (min-width: 750px){
+    .directions-box p{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
 }
