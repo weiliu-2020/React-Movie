@@ -6,14 +6,39 @@ footer{
     justify-content: space-between;
     align-items: center;
     h3{
-        font-size: 1.4em;
+        font-size: 1.2em;
         color: #dad4d4;
     }
     color: #888;
     text-shadow: 0px 2px 3px black;
     
     p{
-        line-height: 8px;
+        text-align: center;
+        font-size: 1em;
+        line-height: 18px;
         margin-top: 4px;
     }
 }
+
+@media (min-width: 500px){
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        h3{
+            font-size: 1.4em;
+            color: #dad4d4;
+        }
+        color: #888;
+        text-shadow: 0px 2px 3px black;
+        
+        p{
+            line-height: 8px;
+            margin-top: 4px;
+        }
+    }
+}
+
+
+

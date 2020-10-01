@@ -68,6 +68,7 @@ const MoviePage = () => {
                     {isItemInStorage(movie) ? <button id="fav_button" className="button" onClick={removeMovie}>Remove from Favourites</button> : 
                     <button id="fav_button" className="button" onClick={addMovie}>Add to Favourites</button>}
                     <p>{movieObj.summary}</p>  
+                    
                 </div>
             </div>
         );

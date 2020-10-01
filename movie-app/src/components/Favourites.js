@@ -1,16 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
-import about1 from '../images/favs2.png';
-import {getStorage} from '../utilities/storageMaker';
+import moneyPlane from '../images/about-image-1.png';
+import ava from '../images/about-image-2.png';
+import {removeFromStorage, isItemInStorage} from '../utilities/storageMaker';
 
 const Favourites = () => {
-    const faveStorageString = getStorage();
-    const sampleArray = faveStorageString;
 
+    let films       = localStorage.getItem('movie-app-your-favourites');
+    const faveArray = JSON.parse(films);
 
-
-    const faveDivs = () => {
-        return sampleArray.map((fave, i) => {
+    function faveDivs() {
+        return faveArray.map((fave, i) => {
             return (
                 <div className={`movie movie-0${i}`} key={i}>
                     <div className="poster-container">
@@ -48,13 +48,15 @@ const Favourites = () => {
             <div className="text-box">
                 <h2>No movies have been added to favourites.</h2>
                 <div className="directions-box">
-                    <div className="directions-left">
+                    {/* <div className="directions-left">
                         <p>To add a movie to your favourites, please hover over any movie with your mouse and click on 'Add to favourites'.</p>
-                        <img src={about1} alt="Adding movie to favorites"></img>
-                    </div>
+                        <img src={moneyPlane} alt="Adding movie to favorites"></img>
+                    </div> */}
+                    <p>To add a movie to your favourites, click on the Movie Title or hover over a movie poster to go to that specific movie's description page.</p>
+                    <p> Then click on the 'Add to to Favorites' button as shown in the Image below. </p>
                     <div className="directions-right">
-                        <p>Alternatively, you could add a movie to your favourites by doing so directly from the description page of any given movie.</p>
-                        <img src={about1} alt="Adding movie to favorites"></img>
+                        
+                        <img src={ava} alt="Adding movie to favorites"></img>
                     </div>
                 </div>
             </div>
@@ -64,7 +66,7 @@ const Favourites = () => {
     return (
         <main>
             <section>
-                {sampleArray && sampleArray.length ? <YesFaves /> : <NoFaves />}
+                {faveArray && faveArray.length ? <YesFaves /> : <NoFaves />}
             </section>
         </main>
     )
