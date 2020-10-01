@@ -1,6 +1,7 @@
 @use './base/variables' as *;
 
 .movie-page-container {
+    text-align: center;
     margin: 35px;
     img {
         display: block;
