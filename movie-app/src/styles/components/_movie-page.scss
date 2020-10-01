@@ -6,6 +6,7 @@
     img {
         display: block;
         border: 1px solid #56C7F5;
+        margin: 0 auto;
     }
     h1, h3 {
         margin: 5px;
@@ -18,21 +19,27 @@
     .date-rating {
         display: flex;
         justify-content: space-evenly;
-        margin-top: 10px;
+        margin: 10px 0px;
+    }
+    .add-remove-button {
+        padding: 10px;
+        cursor: pointer;
+    }
+    #fav_button {
+        border: none;
+        background-color: #0f698d;
+        color: $bodyTextColor;
+        font-size: 1em;
+        text-align: center;
+        margin: 10px;
     }
     p {
-        margin: 0px;
+        margin: 10px 0px 0px 0px;
         padding: 10px;
+        line-height: 2em;
     }
 }
-#fav_button {
-    border: 1px black solid;
-    font-size: 1em;
-    border-radius: 5px;
-    text-align: center;
-    margin: auto;
-    outline: none;
-}
+
 
 @media (min-width: 750px) {
     .movie-page-container {
